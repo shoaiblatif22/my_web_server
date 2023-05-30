@@ -12,6 +12,7 @@ describe Application do
       response = get('/')
 
       expect(response.status).to be(200)
+      expect(response.body).to eq('Hello!')
     end
   end
 end
