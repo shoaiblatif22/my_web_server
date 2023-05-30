@@ -2,6 +2,18 @@ require 'sinatra/base'
 
 class Application < Sinatra::Base
 
+  get '/hello' do
+    name = params[:name]
+
+    return "Hello #{name}"
+  end
+
+
+
+
+
+
+=begin
   get '/' do
     return 'Hello!'
   end
@@ -13,4 +25,5 @@ class Application < Sinatra::Base
   post '/posts' do
     return 'A post was created'
   end
+=end
 end
