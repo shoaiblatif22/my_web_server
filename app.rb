@@ -2,7 +2,12 @@ require 'sinatra/base'
 
 class Application < Sinatra::Base
 
-  get '/' do
+end
+
+ 
+  
+=begin
+ get '/' do
     
     return 'Hello!'
   end
@@ -17,8 +22,7 @@ class Application < Sinatra::Base
     name = params['name']
     message = params['message']
     "Thanks #{name}, you sent this message: '#{message}'"
-  end
-
+=end
 
 
 
@@ -35,4 +39,3 @@ class Application < Sinatra::Base
     return 'A post was created'
   end
 =end
-end
