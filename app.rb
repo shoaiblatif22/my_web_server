@@ -2,6 +2,11 @@ require 'sinatra/base'
 
 class Application < Sinatra::Base
 
+  get '/' do
+    
+    return 'Hello!'
+  end
+
   get '/hello' do
     name = params[:name]
 
@@ -20,9 +25,7 @@ class Application < Sinatra::Base
 
 
 =begin
-  get '/' do
-    return 'Hello!'
-  end
+  
 
   get '/posts' do
     return 'A list of posts'
