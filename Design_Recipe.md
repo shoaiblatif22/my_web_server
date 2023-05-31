@@ -1,4 +1,4 @@
-{{ METHOD }} {{ PATH}} Route Design Recipe
+GET /hello Route Design Recipe
 Copy this design recipe template to test-drive a Sinatra route.
 
 # 1. Design the Route Signature
@@ -8,6 +8,15 @@ the HTTP method
 the path
 any query parameters (passed in the URL)
 or body parameters (passed in the request body)
+
+|--|--|--|
+
+Return a hello message
+Method: GET
+Path: /hello
+Query Paramters:
+  name(string)
+
 
 
 # 2. Design the Response
@@ -19,45 +28,36 @@ Your response might return plain text, JSON, or HTML code.
 
 Replace the below with your own design. Think of all the different possible responses your route will return.
 
-<!-- EXAMPLE -->
-<!-- Response when the post is found: 200 OK -->
 
-<html>
-  <head></head>
-  <body>
-    <h1>Post title</h1>
-    <div>Post content</div>
-  </body>
-</html>
-<!-- EXAMPLE -->
-<!-- Response when the post is not found: 404 Not Found -->
+When query param `name` is `Shoaib`
+```
+Hello Shoaib!
+```
 
-<html>
-  <head></head>
-  <body>
-    <h1>Sorry!</h1>
-    <div>We couldn't find this post. Have a look at the homepage?</div>
-  </body>
-</html>
+When query param `name` is `Josh`
+```
+Hello Josh!
+```
 
 
 # 3. Write Examples
 Replace these with your own design.
 
-# Request:
+## 1: Request:
 
-GET /posts?id=1
-
-# Expected response:
-
-Response for 200 OK
-# Request:
-
-GET /posts?id=276278
+GET /hello?name=Shoaib
 
 # Expected response:
 
-Response for 404 Not Found
+Hello Shoaib!
+
+## 2: Request:
+
+GET /hello?name=Josh
+
+# Expected response:
+
+Hello Josh!
 
 
 # 4. Encode as Tests Examples
