@@ -31,6 +31,15 @@ describe Application do
       expect(response.body).to eq('Julia, Mary, Karim')
     end
   end
+
+  context "POST /names" do
+    it 'should return a list of sorted names "Alice,Joe,Julia,Kieran,Zoe"' do
+      response = post('/names', 'sort-names':'Joe,Alice,Zoe,Julia,Kieran')
+  
+      expect(response.status).to eq(200)
+      expect(response.body).to eq("Alice,Joe,Julia,Kieran,Zoe")
+    end
+  end
 end
 
 =begin

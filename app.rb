@@ -10,7 +10,23 @@ class Application < Sinatra::Base
     names = params[:name]
     return "#{names}"
   end
+
+  post '/names' do
+    names = params[:'sort-names']
+    array = names.split(",")
+    array.sort!
+    array = array.join(",")
+    return array
+  end
 end
+=begin
+    
+=end
+
+
+
+
+
 
  
   
